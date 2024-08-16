@@ -60,8 +60,7 @@ require __DIR__.'/auth.php';
 
 Route::middleware('role:kaprodi')->group(function () {
     // ----------------- DOSEN --------------------
-    // Route::get('/dashboard', [DosenController::class, 'dashboard'])->name('dashboard');
-    // Route::get('/dashboard', [MahasiswaController::class, 'dashboard'])->name('dashboard');
+    
     Route::get('/dosen', [DosenController::class, 'indexDosen'])->name('dosen.index');
     Route::get('/dosenn/search', [DosenController::class, 'search'])->name('dosenn.search');
     Route::post('/dosen', [DosenController::class, 'storeDosen'])->name('dosen.store');
